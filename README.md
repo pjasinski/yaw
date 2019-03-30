@@ -3,7 +3,7 @@
 Yaw flight tracker is a flight tracker webapp that I am using to monitor air traffic above my house. It will be hosted on patolento.com/yaw. The system uses [dump1090-mutiability](https://github.com/mutability/dump1090), nodejs, react, and angularjs, to render realtime flight data from an RTL-SDR reciever and an antenna mounted in my attic.
 ## JSON
 The JSON data used in the app follows this format (from [dump1090](https://github.com/mutability/dump1090/blob/master/README-json.md)):
--hex: the 24-bit ICAO identifier of the aircraft, as 6 hex digits. The identifier may start with '~', this means that the address is a non-ICAO address (e.g. from TIS-B).
+- hex: the 24-bit ICAO identifier of the aircraft, as 6 hex digits. The identifier may start with '~', this means that the address is a non-ICAO address (e.g. from TIS-B).
 - squawk: the 4-digit squawk (octal representation)
 - flight: the flight name / callsign
 - lat, lon: the aircraft position in decimal degrees
