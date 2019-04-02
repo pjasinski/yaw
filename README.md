@@ -16,3 +16,7 @@ The JSON data used in the app follows this format (from [dump1090](https://githu
 - messages: total number of Mode S messages received from this aircraft
 - seen: how long ago (in seconds before "now") a message was last received from this aircraft
 - rssi: recent average RSSI (signal power), in dbFS; this will always be negative.
+
+The data can be accessed raw live at https://patolento.com/aircraft.json
+
+This is a live view of the Mode S ADSB signals over my house at any given time. 
