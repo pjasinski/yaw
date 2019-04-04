@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AircraftComponent } from './aircraft/aircraft.component';
+import { AircraftListComponent } from './aircraft-list/aircraft-list.component';
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AircraftComponent,
+    AircraftListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
