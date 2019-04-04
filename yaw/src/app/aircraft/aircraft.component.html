@@ -1,18 +1,12 @@
 <div *ngIf="hasFlightNumber()"> 
-    <span class="hex">hex: {{ aircraft.hex }}</span>
-    <span class="squawk">squak:{{ aircraft.squawk }} </span>
-    <span class="flight">flight: {{ aircraft.flight }} </span>
-    <a href="https://www.google.com/maps/search/?api=1&query={{ aircraft.lat }},{{ aircraft.lon }}">
-    <span class="lat">lat:{{ aircraft.lat }} </span>
-    <span class="lon">lon: {{ aircraft.lon }} </span>
+    <span class="flight">{{ aircraft.flight }} </span>
+    <span class="squawk">{{ aircraft.squawk }} </span>
+    <a href="https://www.google.com/maps/search/?api=1&query={{ aircraft.lat }},{{ aircraft.lon }}" target="_blank">
+    <span class="lat">{{ aircraft.lat }} </span>
+    <span class="lon">{{ aircraft.lon }} </span>
     </a>
-    <span class="nucp">nucp: {{ aircraft.nucp }} </span>
-    <span class="seen_pos">seen_pos: {{ aircraft.seen_pos }} </span>
-    <span class="altitude">altitude: {{ aircraft.altitude }} </span>
-    <span class="vert_rate">vert_rate: {{ aircraft.vert_rate }} </span>
-    <span class="track">track: {{ aircraft.track }} </span>
-    <span class="speed">speed: {{ aircraft.speed }} </span>
-    <span class="messages">messages: {{ aircraft.messages }} </span>
-    <span class="seen">seen: {{ aircraft.seen }} </span>
-    <span class="rssi">rssi: {{ aircraft.rssi }} </span>
+    <span class="altitude">{{ aircraft.altitude }} </span>
+    <span class="vert_rate">{{ aircraft.vert_rate }} </span>
+    <span class="track">{{ aircraft.track }} </span>
+    
 </div>
