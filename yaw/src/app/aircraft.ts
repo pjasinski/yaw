@@ -1,4 +1,4 @@
-export interface IAircraft {
+export interface Aircraft {
     hex: string;
     squawk?: number;
     flight?: string;

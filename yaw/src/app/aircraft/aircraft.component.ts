@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AircraftService } from '../aircraft.service';
-import { IAircraft } from '../aircraft';
+import { Aircraft } from '../aircraft';
 
 @Component({
   selector: 'app-aircraft',
@@ -9,13 +9,24 @@ import { IAircraft } from '../aircraft';
 })
 
 export class AircraftComponent implements OnInit {
-  @Input() aircraft: object;
+  @Input() aircraft: Aircraft;
   
   constructor(private service: AircraftService) { 
     
   }
-
+ 
   ngOnInit() {
+  }
+  
+  hasFlightNumber() {
+    if ('flight' in this.aircraft) {
+      console.log("aircraft has flight number");
+      return true;
+    }
+    else {
+      console.log("no flight number found");
+      return false;
+    }
   }
 
 }
