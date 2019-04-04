@@ -1,9 +1,11 @@
 <div *ngIf="hasFlightNumber()"> 
     <span class="hex">hex: {{ aircraft.hex }}</span>
     <span class="squawk">squak:{{ aircraft.squawk }} </span>
-    <span class="flight">flight:{{ aircraft.flight }} </span>
+    <span class="flight">flight: {{ aircraft.flight }} </span>
+    <a href="https://www.google.com/maps/search/?api=1&query={{ aircraft.lat }},{{ aircraft.lon }}">
     <span class="lat">lat:{{ aircraft.lat }} </span>
     <span class="lon">lon: {{ aircraft.lon }} </span>
+    </a>
     <span class="nucp">nucp: {{ aircraft.nucp }} </span>
     <span class="seen_pos">seen_pos: {{ aircraft.seen_pos }} </span>
     <span class="altitude">altitude: {{ aircraft.altitude }} </span>
