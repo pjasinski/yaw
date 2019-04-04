@@ -6,8 +6,8 @@ declare var ol: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  latitude: number = 18.5204;
-  longitude: number = 73.8567;
+  latitude: number = 39.3996;
+  longitude: number = -76.5239;
 
   map: any;
 
@@ -20,7 +20,7 @@ export class AppComponent {
         })
       ],
       view: new ol.View({
-        center: ol.proj.fromLonLat([73.8567, 18.5204]),
+        center: ol.proj.fromLonLat([-76.5239, 39.3996]),
         zoom: 8
       })
     });
