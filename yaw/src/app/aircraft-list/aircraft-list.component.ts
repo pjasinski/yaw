@@ -8,18 +8,19 @@ import { Aircraft } from '../aircraft';
   styleUrls: ['./aircraft-list.component.css']
 })
 export class AircraftListComponent implements OnInit {
-
-  constructor(private dump1090: AircraftService) { }
   aircrafts: Aircraft[];
-  aircraft: Aircraft[];
+  
+  constructor(private airService: AircraftService) {  
+
+  }
+  
   ngOnInit() {
-    this.dump1090.returnAircraft().toPromise().then((response) => {
-      console.log(response.aircraft);
-      this.aircrafts = response.aircraft;
-    })
-    .catch((error) => {
-      console.error(error);
-    })
+    this.airService.returnAircraft()
+       .subscribe(data => {
+          this.aircrafts = data.aircraft;
+          console.log(this.aircrafts);
+       });
+    console.log(this.aircrafts);
   }
 
 }
