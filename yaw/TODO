@@ -1,0 +1,8 @@
+- make history data servable in some way
+- research better dump1090 serverside options
+    - lat-lon set to my house 
+- write and run express server on patolento.com
+- integrate history data into a database
+- make the app look good with some colors and stuff
+- reformat aircraft-list-component to form a table 
+- get markers working 
