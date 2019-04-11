@@ -230,8 +230,8 @@ typedef enum {
 #define HTMLPATH   "./public_html"      // default path for gmap.html etc
 #endif
 
-#define HISTORY_SIZE 120
-#define HISTORY_INTERVAL 30000
+#define HISTORY_SIZE 999999
+#define HISTORY_INTERVAL 9000000
 
 #define MODES_NOTUSED(V) ((void) V)
 
