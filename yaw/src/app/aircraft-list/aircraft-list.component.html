@@ -1,12 +1,37 @@
-<span>Flight #</span>
-<span>Squawk</span>
-<span>lat</span>
-<span>lon</span>
-<span>Altitude</span>
-<span>Vertical Speed</span>
-<span>Heading</span>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+<header>
+<table width = "1300px">
+  <tr>
+        
+<th width = "200px"><span>Flight #</span></th>
+
+<th width = "200px"><span>Squawk</span></th>
+<th width = "300px"><span>Latitude     </span>
+<span>Longitude</span></th>
+<th width = "200px"><span>Altitude</span></th>
+<th width = "200px"><span>Vertical Speed</span></th>
+<th width = "200px"><span>Heading</span></th>
+
+  </tr>
+</table>
+</header>
 <ul style="list-style-type: none;">
   <li *ngFor="let aircraft of aircrafts" >
     <app-aircraft [aircraft]="aircraft"> </app-aircraft>
   </li>
 </ul>
+
+</body>
+</html>

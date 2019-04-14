@@ -6,6 +6,6 @@
 - research better dump1090 serverside options
     - lat-lon set to my house 
 - integrate history data into a database
-- make the app look good with some colors and stuff
-- reformat aircraft-list-component to form a table 
+
+-possibly integrate day/night colors to match with the google map api
 

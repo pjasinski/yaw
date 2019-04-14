@@ -23,11 +23,18 @@ export class MapComponent implements OnInit {
   
   constructor (private airService: AircraftService) { }
   /*  
-  right now, i cannot make the data from the observable available to the rest of the component. this makes it difficult to draw the icon that I need on the map 
-  in order for the aircraft to be displayed iteratively. i think there are a couple ways to fix this.
-  1: learn how to get the data OUT of the subscribe method in a way that I can use it to draw on the map in this component.
-  2: draw the map, pass it and an individual aircraft to a "map icon drawer component" using the binding similar to the aircraft-list component. the "map-icon component"
-  would be responsible for orienting (using the heading of the aircraft) and drawing a vector image of a plane sent to it. this feels like the most "angular" way to solve this problem.  
+  Right now, I cannot make the data from the observable available to the rest of the component. this makes it
+  difficult to draw the icon that I need on the map in order for the aircraft to be displayed iteratively. 
+  I think there are a couple ways to fix this:
+
+  1: Learn how to get the data OUT of the subscribe method in a way that I can use it to draw on the map 
+  in this component.
+
+  2: Draw the map, pass it and an individual aircraft to a "map icon drawer component" using the binding similar
+  to the aircraft-list component. 
+  The "map-icon component" would be responsible for orienting (using the heading of the aircraft)
+  and drawing a vector image of a plane sent to it. this feels like the most "angular" way to solve this problem.  
+
   */
   ngOnInit() {
     /*while(!this.aircraft) {

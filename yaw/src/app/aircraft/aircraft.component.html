@@ -1,12 +1,38 @@
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+
 <div *ngIf="hasFlightNumber()"> 
-    <span class="flight">{{ aircraft.flight }} </span>
-    <span class="squawk">{{ aircraft.squawk }} </span>
+        <table width = "1252px">
+    <tr>
+
+    <td width = "130px"><span class="flight">{{ aircraft.flight }} </span></td>
+    <td width = "200px"><span class="squawk">{{ aircraft.squawk }} </span></td>
+    <td width = "300px">
     <a href="https://www.google.com/maps/search/?api=1&query={{ aircraft.lat }},{{ aircraft.lon }}" target="_blank">
     <span class="lat">{{ aircraft.lat }} </span>
     <span class="lon">{{ aircraft.lon }} </span>
     </a>
-    <span class="altitude">{{ aircraft.altitude }} </span>
-    <span class="vert_rate">{{ aircraft.vert_rate }} </span>
-    <span class="track">{{ aircraft.track }} </span>
-    
+    </td>
+    <td width = "200px"><span class="altitude">{{ aircraft.altitude }} </span></td>
+    <td width = "200px"><span class="vert_rate">{{ aircraft.vert_rate }} </span></td>
+    <td width = "200px"><span class="track">{{ aircraft.track }} </span></td>
+
+    </tr>
+</table>
+
 </div>
+
+</body>
+</html>
