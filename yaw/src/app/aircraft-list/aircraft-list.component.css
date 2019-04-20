@@ -6,9 +6,11 @@ html {
     margin: auto 10px;
     width: auto;
     height: 1300px;
-    background-color: rgb(77, 77, 77);
+    background-color: rgb(242, 239, 233); 
+
 
 }
 header {
-    color: rgb(128, 191, 255);
+   /* color: rgb(202, 226, 194); */
+    color: rgb(51,51,51)
 }
