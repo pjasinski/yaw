@@ -1033,8 +1033,8 @@ char *generateAircraftJson(const char *url_path, int *len) {
         else
             *p++ = ',';
            
-        p += snprintf(p, end-p, "\n    {\"hex\":\"%s%06x\"", (a->addr & MODES_NON_ICAO_ADDRESS) ? "~" : "", a->addr & 0xFFFFFF);
-        p += snprintf(p, end-p, "\n   ,\"timeSeen\":\"%.1f\"", now/1000.0 );
+        p += snprintf(p, end-p, "\n{\"hex\":\"%s%06x\"", (a->addr & MODES_NON_ICAO_ADDRESS) ? "~" : "", a->addr & 0xFFFFFF);
+        p += snprintf(p, end-p, "\n,\"timeSeen\":\"%.1f\"", now/1000.0 );
         if (a->addrtype != ADDR_ADSB_ICAO)
             p += snprintf(p, end-p, ",\"type\":\"%s\"", addrtype_short_string(a->addrtype));
         if (trackDataValid(&a->squawk_valid))
@@ -1076,7 +1076,7 @@ char *generateAircraftJson(const char *url_path, int *len) {
         }
     }
 
-    p += snprintf(p, end-p, "\n  ]\n}\n");
+    //p += snprintf(p, end-p, "\n  ]\n}\n");
     *len = p-buf;
     return buf;
 }
