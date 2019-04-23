@@ -1019,13 +1019,6 @@ char *generateAircraftJson(const char *url_path, int *len) {
 
     MODES_NOTUSED(url_path);
 
-    p += snprintf(p, end-p,
-                  "{ \"now\" : %.1f,\n"
-                  "  \"messages\" : %u,\n"
-                  "  \"aircraft\" : [",
-                  now / 1000.0,
-                  Modes.stats_current.messages_total + Modes.stats_alltime.messages_total);
-
     for (a = Modes.aircrafts; a; a = a->next) {
         if (a->modeACflags & MODEAC_MSG_FLAG) { // skip any fudged ICAO records Mode A/C
             continue;
@@ -1039,8 +1032,9 @@ char *generateAircraftJson(const char *url_path, int *len) {
             first = 0;
         else
             *p++ = ',';
-            
+           
         p += snprintf(p, end-p, "\n    {\"hex\":\"%s%06x\"", (a->addr & MODES_NON_ICAO_ADDRESS) ? "~" : "", a->addr & 0xFFFFFF);
+        p += snprintf(p, end-p, "\n   ,\"timeSeen\":\"%.1f\"", now/1000.0 );
         if (a->addrtype != ADDR_ADSB_ICAO)
             p += snprintf(p, end-p, ",\"type\":\"%s\"", addrtype_short_string(a->addrtype));
         if (trackDataValid(&a->squawk_valid))
