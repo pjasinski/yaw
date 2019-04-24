@@ -20,7 +20,7 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     this.airService.returnAircraft().subscribe(data => {
-      this.aircrafts = data.aircraft;
+      this.aircrafts = data;
       //console.log(this.aircrafts);
     });
     

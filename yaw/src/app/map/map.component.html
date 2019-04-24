@@ -1,4 +1,3 @@
-<agm-map [latitude]="homeLat" [longitude]="homeLon">
-    
+<agm-map [latitude]="homeLat" [longitude]="homeLon"> 
     <agm-marker *ngFor="let plane of aircrafts" [latitude]="plane.lat" [longitude]="plane.lon"></agm-marker>
 </agm-map>

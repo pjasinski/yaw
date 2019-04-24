@@ -11,6 +11,6 @@ export class AircraftService {
   constructor(private http: HttpClient) { }
 
   returnAircraft() {
-    return this.http.get<JSONData>(this._url);
+    return this.http.get<Aircraft[]>(this._url);
   }
 }

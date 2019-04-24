@@ -20,11 +20,11 @@ export class AircraftComponent implements OnInit {
   
   hasFlightNumber() {
     if ('flight' in this.aircraft) {
-      console.log("aircraft has flight number");
+      //console.log("aircraft has flight number");
       return true;
     }
     else {
-      console.log("no flight number found");
+      //console.log("no flight number found");
       return false;
     }
   }
