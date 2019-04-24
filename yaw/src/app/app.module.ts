@@ -8,6 +8,7 @@ import { AircraftListComponent } from './aircraft-list/aircraft-list.component';
 import { HttpClientModule } from "@angular/common/http";
 import { AgmCoreModule } from '@agm/core'
 import * as dotenv from 'dotenv';
+import { MapComponent } from './map/map.component';
 
 //dotenv.config();
 
@@ -17,6 +18,7 @@ import * as dotenv from 'dotenv';
     AppComponent,
     AircraftComponent,
     AircraftListComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
