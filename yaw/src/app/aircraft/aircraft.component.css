@@ -3,10 +3,10 @@ span {
 }
 
 body {
-    color: rgb(232,115,140);
+    color: rgb(234,67,53);
 }
 
 table tr td:nth-child(even) {
-    background: rgb(236, 232, 223); ;
+    background: rgb(245, 245, 245); ;
 }
 
