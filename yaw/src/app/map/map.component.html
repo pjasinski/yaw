@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+
+
 <agm-map [latitude]="homeLat" [longitude]="homeLon"> 
-    <agm-marker *ngFor="let plane of aircrafts" [latitude]="plane.lat" [longitude]="plane.lon"></agm-marker>
+    <agm-marker
+     *ngFor="let plane of aircrafts" 
+     [latitude]="plane.lat" 
+     [longitude]="plane.lon"
+     [iconUrl]='{url:    "https://i.imgur.com/y31vKka.png" }'
+     >
+    </agm-marker>
 </agm-map>
+
+</html>
