@@ -9,7 +9,7 @@ var jsonobj = JSON.parse(jsonfile);
 var onlyFlightNumbers = [];
 jsonobj.aircraft.forEach(function(element) {
     if (element.lat && element.lon && element.flight){
-        element.timeSeen = Math.ceil(jsonobj.now);
+        element.timeSeen = Math.ceil((new Date()).getTime() / (1000*60)) * (1000*60); // round time to the nearest minute
         onlyFlightNumbers.push(element);
     }
 }); 
