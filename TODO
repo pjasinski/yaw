@@ -1,6 +1,4 @@
-- fix flight field space bug and fix for every object in database
-- get express api running and deployed
-- make sure correct dump1090 is running 
+- get express api deployed
 cmd: ./dump1090 --quiet --write-json /srv/data/ --write-json-every 10
 - add flight number on click for agm-markers
 - add heading based markers 
