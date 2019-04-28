@@ -9,7 +9,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AgmCoreModule } from '@agm/core'
 import * as dotenv from 'dotenv';
 import { MapComponent } from './map/map.component';
-
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 //dotenv.config();
 
 //const mapApiKey : string = process.env.MAPKEY || '';
@@ -26,7 +26,8 @@ import { MapComponent } from './map/map.component';
     HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDjV56cqDGNT4sLtX-Z4A08inmwPJokdyg'
-    })
+    }),
+    AgmSnazzyInfoWindowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

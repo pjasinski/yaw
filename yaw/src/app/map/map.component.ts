@@ -15,9 +15,12 @@ export class MapComponent implements OnInit {
   homeLat: number = 39.3996;
   homeLon: number = -76.5239;
   public agmMap: AgmMap;
+  previousWindow: any;
   
   constructor(private airService : AircraftService) {}
-
+  displayFlightNumber(event) {
+    console.log(event);
+  }
   ngOnInit() {
     this.airService.returnAircraft().subscribe(data => {
       this.aircrafts = data;
