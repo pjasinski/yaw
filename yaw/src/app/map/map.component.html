@@ -3,12 +3,11 @@
 
 <agm-map [latitude]="homeLat" [longitude]="homeLon"> 
     <agm-marker
-     *ngFor="let plane of aircrafts; let i = index" 
+     *ngFor="let plane of aircrafts" 
      [latitude]="plane.lat" 
      [longitude]="plane.lon"
-     [iconUrl]='{url:    "https://i.imgur.com/y31vKka.png" }'
-    
-     (markerClick)="displayFlightNumber(plane, i)"
+     [iconUrl]="getIconURL(plane.track)"
+     [opacity]="0.7"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
            <ng-template> {{ plane.flight }} </ng-template>
