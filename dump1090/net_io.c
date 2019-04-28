@@ -1018,7 +1018,14 @@ char *generateAircraftJson(const char *url_path, int *len) {
     int first = 1;
 
     MODES_NOTUSED(url_path);
-    p += snprintf(p, end-p, "aircraft: [\n");
+
+    p += snprintf(p, end-p,
+                  "{ \"now\" : %.1f,\n"
+                  "  \"messages\" : %u,\n"
+                  "  \"aircraft\" : [",
+                  now / 1000.0,
+                  Modes.stats_current.messages_total + Modes.stats_alltime.messages_total);
+
     for (a = Modes.aircrafts; a; a = a->next) {
         if (a->modeACflags & MODEAC_MSG_FLAG) { // skip any fudged ICAO records Mode A/C
             continue;
@@ -1032,9 +1039,8 @@ char *generateAircraftJson(const char *url_path, int *len) {
             first = 0;
         else
             *p++ = ',';
-           
-        p += snprintf(p, end-p, "\n{\"hex\":\"%s%06x\"", (a->addr & MODES_NON_ICAO_ADDRESS) ? "~" : "", a->addr & 0xFFFFFF);
-        p += snprintf(p, end-p, "\n,\"timeSeen\":\"%.1f\"", now/1000.0 );
+            
+        p += snprintf(p, end-p, "\n    {\"hex\":\"%s%06x\"", (a->addr & MODES_NON_ICAO_ADDRESS) ? "~" : "", a->addr & 0xFFFFFF);
         if (a->addrtype != ADDR_ADSB_ICAO)
             p += snprintf(p, end-p, ",\"type\":\"%s\"", addrtype_short_string(a->addrtype));
         if (trackDataValid(&a->squawk_valid))
@@ -1061,7 +1067,7 @@ char *generateAircraftJson(const char *url_path, int *len) {
         p += snprintf(p, end-p, ",\"tisb\":");
         p = append_flags(p, end, a, SOURCE_TISB);
 
-        p += snprintf(p, end-p, ",\"messages\":%ld,\"seen\":%.1f,\"rssi\":%.1f}]",
+        p += snprintf(p, end-p, ",\"messages\":%ld,\"seen\":%.1f,\"rssi\":%.1f}",
                       a->messages, (now - a->seen)/1000.0,
                       10 * log10((a->signalLevel[0] + a->signalLevel[1] + a->signalLevel[2] + a->signalLevel[3] +
                                   a->signalLevel[4] + a->signalLevel[5] + a->signalLevel[6] + a->signalLevel[7] + 1e-5) / 8));
@@ -1076,7 +1082,7 @@ char *generateAircraftJson(const char *url_path, int *len) {
         }
     }
 
-    //p += snprintf(p, end-p, "\n  ]\n}\n");
+    p += snprintf(p, end-p, "\n  ]\n}\n");
     *len = p-buf;
     return buf;
 }
