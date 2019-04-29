@@ -1,6 +1,3 @@
 - get express api deployed
 cmd: ./dump1090 --quiet --write-json /srv/data/ --write-json-every 10
-- add flight number on click for agm-markers
-- add heading based markers 
-- add opacity for markers 
 - oh yeah and security I guess 
