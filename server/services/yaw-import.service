@@ -1,0 +1,5 @@
+[Unit]
+Description=Service for aircraft data import for yaw
+
+[Service]
+ExecStart=/usr/bin/node /srv/scripts/jsonscript.js
