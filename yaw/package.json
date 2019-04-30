@@ -25,6 +25,7 @@
     "dotenv": "^7.0.0",
     "rxjs": "~6.3.3",
     "snazzy-info-window": "^1.1.1",
+    "socket.io-client": "^2.2.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
