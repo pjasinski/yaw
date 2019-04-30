@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AircraftService } from '../aircraft.service';
+import { Aircraft2Service } from '../aircraft2.service';
 import { Aircraft } from '../aircraft';
 import { AgmMap } from '@agm/core';
 @Component({
@@ -10,14 +10,14 @@ import { AgmMap } from '@agm/core';
 @ViewChild(AgmMap)
 
 export class MapComponent implements OnInit {
-  aircrafts: Aircraft[];
+  aircrafts;
   markers: marker[];
   homeLat: number = 39.3996;
   homeLon: number = -76.5239;
   public agmMap: AgmMap;
   iconUrl: any;
   
-  constructor(private airService : AircraftService) {}
+  constructor(private airService: Aircraft2Service) {}
   displayFlightNumber(event) {
     console.log(event);
   }
