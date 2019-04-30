@@ -7,10 +7,10 @@
      [latitude]="plane.lat" 
      [longitude]="plane.lon"
      [iconUrl]="getIconURL(plane.track)"
-     [opacity]="0.7"
+     [opacity]="0.9"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
-           <ng-template> {{ plane.flight }} </ng-template>
+           <ng-template> {{ plane.flight }} <br> Hdg: {{ plane.track }}</ng-template>
         </agm-snazzy-info-window>
     </agm-marker>
 </agm-map>
