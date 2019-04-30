@@ -1,0 +1,20 @@
+{
+  "name": "testsocket",
+  "version": "1.0.0",
+  "description": "socket for live aircraft data",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server.js"
+  },
+  "author": "skyrider245@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}

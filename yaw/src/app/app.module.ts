@@ -10,6 +10,7 @@ import { AgmCoreModule } from '@agm/core'
 import * as dotenv from 'dotenv';
 import { MapComponent } from './map/map.component';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+import { Aircraft2Service } from './aircraft2.service';
 //dotenv.config();
 
 //const mapApiKey : string = process.env.MAPKEY || '';
@@ -29,7 +30,7 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     }),
     AgmSnazzyInfoWindowModule
   ],
-  providers: [],
+  providers: [Aircraft2Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

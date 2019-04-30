@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AircraftService } from '../aircraft.service';
+import { Aircraft2Service } from '../aircraft2.service';
 import { Aircraft } from '../aircraft';
 
 @Component({
@@ -8,16 +8,16 @@ import { Aircraft } from '../aircraft';
   styleUrls: ['./aircraft-list.component.css']
 })
 export class AircraftListComponent implements OnInit {
-  aircrafts: Aircraft[];
+  aircrafts;
   
-  constructor(private airService: AircraftService) {  
+  constructor(private airService: Aircraft2Service) {  
 
   }
   
   ngOnInit() {
     this.airService.returnAircraft()
        .subscribe(data => {
-          this.aircrafts = data;
+          this.aircrafts = (data);
           console.log(this.aircrafts);
        });
     console.log(this.aircrafts);
