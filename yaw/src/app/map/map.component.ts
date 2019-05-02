@@ -15,45 +15,23 @@ export class MapComponent implements OnInit {
   homeLat: number = 39.3996;
   homeLon: number = -76.5239;
   public agmMap: AgmMap;
-  iconUrl: any;
-  
+  iconUrl: any = "https://upload.wikimedia.org/wikipedia/commons/1/17/Fighter_jet_red_icon.svg";
   constructor(private airService: Aircraft2Service) {}
   displayFlightNumber(event) {
     console.log(event);
   }
-
+  /*
   getIconURL(h: number) {
-    let direction = "nw"; // northwest by default
-    if (h >= 0 && h < 45) {
-      direction = "n";
+    /*
+    let direction : number = Math.ceil(h/15)*15; // this spits out the nearest degrees 
+    if (direction == 360) {
+      direction = 0;
     }
-    if (h >= 45 && h < 90) {
-      direction = "ne";
-    }
-    if (h >=90 && h < 135) {
-      direction = "e";
-    }
-    if (h >=135 && h < 180) {
-      direction = "se";
-    }
-    if (h >=180 && h < 225) {
-      direction = "s";
-    }
-    if (h >= 225 && h < 270) {
-      direction = "sw";
-    }
-    if (h >= 270 && h < 315 ) {
-      direction = "w";
-    }
-    if (h >= 315 && h < 360) {
-      direction = "nw";
-    }
-   
-    let url = "https://patolento.com/planeicons/".concat(direction).concat(".png");
+    //console.log(direction);
+    let url = './marker.png';
     //console.log(url);
     //console.log(h);
-    return url;
-  }
+    return url;} */
   ngOnInit() {
     this.airService.returnAircraft().subscribe(data => {
       this.aircrafts = data;

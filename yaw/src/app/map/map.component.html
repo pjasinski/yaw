@@ -4,9 +4,9 @@
 <agm-map [latitude]="homeLat" [longitude]="homeLon"> 
     <agm-marker
      *ngFor="let plane of aircrafts" 
-     [latitude]="plane.lat" 
+    [latitude]="plane.lat" 
      [longitude]="plane.lon"
-     [iconUrl]="getIconURL(plane.track)"
+     [iconUrl]="iconUrl"
      [opacity]="0.9"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
