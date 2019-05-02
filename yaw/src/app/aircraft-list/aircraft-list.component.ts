@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Aircraft2Service } from '../aircraft2.service';
-import { Aircraft } from '../aircraft';
+import { Observable} from 'rxjs';
 
 @Component({
   selector: 'app-aircraft-list',
@@ -8,12 +8,9 @@ import { Aircraft } from '../aircraft';
   styleUrls: ['./aircraft-list.component.css']
 })
 export class AircraftListComponent implements OnInit {
-  aircrafts;
-  
-  constructor(private airService: Aircraft2Service) {  
+  private aircrafts;
 
-  }
-  
+  constructor(private airService: Aircraft2Service) { }
   ngOnInit() {
     this.airService.returnAircraft()
        .subscribe(data => {
