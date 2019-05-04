@@ -11,9 +11,10 @@ import * as dotenv from 'dotenv';
 import { MapComponent } from './map/map.component';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { Aircraft2Service } from './aircraft2.service';
-//dotenv.config();
 
-//const mapApiKey : string = process.env.MAPKEY || '';
+dotenv.config();
+
+const mapApiKey : string = process.env.MAPKEY || '';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { Aircraft2Service } from './aircraft2.service';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDjV56cqDGNT4sLtX-Z4A08inmwPJokdyg'
+      apiKey: 'AIzaSyDjV56cqDGNT4sLtX'
     }),
     AgmSnazzyInfoWindowModule
   ],
