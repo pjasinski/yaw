@@ -4,7 +4,12 @@ const socketIo = require("socket.io");
 const axios = require("axios");
 const port = process.env.PORT || 4001;
 const app = express();
-const server = http.createServer(app);
+const fs = require('fs');
+const options = {
+  key: fs.readFileSync("/etc/letsencrypt/live/patolento.com/privkey.pem"),
+  cert: fs.readFileSync("/etc/letsencrypt/live/patolento.com/fullchain.pem")
+};
+const server = http.createServer(options, app);
 const io = socketIo(server);
 io.on("connection", socket => {
   console.log("New client connected"), setInterval(
