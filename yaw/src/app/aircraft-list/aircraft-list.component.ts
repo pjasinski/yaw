@@ -8,7 +8,7 @@ import { Observable} from 'rxjs';
   styleUrls: ['./aircraft-list.component.css']
 })
 export class AircraftListComponent implements OnInit {
-  private aircrafts;
+  public aircrafts;
 
   constructor(private airService: Aircraft2Service) { }
   ngOnInit() {
