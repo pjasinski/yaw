@@ -13,7 +13,7 @@ import { Aircraft2Service } from './aircraft2.service';
 
 
 
-const mapApiKey : string = process.env.MAPKEY || '';
+//const mapApiKey : string = process.env.MAPKEY || '';
 @NgModule({
   declarations: [
     AppComponent,
