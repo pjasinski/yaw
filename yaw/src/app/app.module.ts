@@ -26,7 +26,7 @@ import { Aircraft2Service } from './aircraft2.service';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDjV56cqDGNT4sLtX'
+      apiKey: 'AIzaSyDjV56cqDGNT4sLtX-Z4A08inmwPJokdyg'
     }),
     AgmSnazzyInfoWindowModule
   ],
