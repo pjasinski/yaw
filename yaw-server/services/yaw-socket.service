@@ -2,4 +2,4 @@
 Description=start socket server for yaw
 
 [Service]
-ExecStart=/usr/bin/node /srv/scripts/socket/server.js
+ExecStart=/usr/bin/node /srv/yaw/server/server.js
