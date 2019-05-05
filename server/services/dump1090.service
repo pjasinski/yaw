@@ -1,0 +1,5 @@
+[Unit]
+Description=start dump1090
+
+[Service]
+ExecStart=/usr/bin/dump1090 --quiet --write-json /data --write-json-every 5 

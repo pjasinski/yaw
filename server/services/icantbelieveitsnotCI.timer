@@ -1,0 +1,5 @@
+[Unit]
+Description=I can't believe its not CI timer
+
+[Timer]
+OnCalendar=*:*:0/10

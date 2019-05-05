@@ -1,0 +1,5 @@
+[Unit]
+Description=Start yaw Express API
+
+[Service]
+ExecStart=/usr/bin/node /srv/scripts/express/app.js
