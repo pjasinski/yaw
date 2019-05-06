@@ -29,14 +29,13 @@ export class MapComponent implements OnInit {
     }
     //console.log(direction);
     let url = 'assets/plane'.concat(direction.toString()).concat('.svg');
-    console.log(url);
+    //console.log(url);
     //console.log(h);
     return url;
   }
   ngOnInit() {
     this.airService.returnAircraft().subscribe(data => {
       this.aircrafts = data;
-      //console.log(this.aircrafts);
     });
     
   }
