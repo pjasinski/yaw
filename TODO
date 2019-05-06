@@ -1,3 +1,12 @@
-- get express api deployed
-cmd: ./dump1090 --quiet --write-json /srv/data/ --write-json-every 10
-- oh yeah and security I guess 
+- get sockets working with SSL on port 4001
+- set up dotenv to properly secure stuff (make sure you regenerate the maps api key)
+- set up the cheapci scripts to provide continous integration
+- make sure all nessecary components start on boot of the server. 
+  - database importer
+  - socket script
+  - dump1090
+  - ssh
+  - apache
+  - mongo
+- get to implementing features on github in issues
+- possibly integrate day/night colors to match with the google map api

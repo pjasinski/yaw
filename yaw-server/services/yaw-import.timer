@@ -1,0 +1,5 @@
+[Unit]
+Description=Timer for mongodbimport for aircraft data
+
+[Timer]
+OnCalendar=*:*:0/10

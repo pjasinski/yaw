@@ -7,11 +7,11 @@ import { AircraftComponent } from './aircraft/aircraft.component';
 import { AircraftListComponent } from './aircraft-list/aircraft-list.component';
 import { HttpClientModule } from "@angular/common/http";
 import { AgmCoreModule } from '@agm/core'
-import * as dotenv from 'dotenv';
 import { MapComponent } from './map/map.component';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { Aircraft2Service } from './aircraft2.service';
-//dotenv.config();
+
+
 
 //const mapApiKey : string = process.env.MAPKEY || '';
 @NgModule({

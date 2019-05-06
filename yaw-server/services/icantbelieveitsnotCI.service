@@ -1,0 +1,6 @@
+[Unit]
+Description=I can't believe its not CI
+[Service]
+ExecStart=/home/pjasinski/cheapci/cheapci -r https://github.com/tucosc484/yaw.git -l /home/pjasinski/yaw/ -c ./test.sh -m pjasin1@students.towson.edu
+
+

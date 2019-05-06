@@ -1,0 +1,5 @@
+[Unit]
+Description=start socket server for yaw
+
+[Service]
+ExecStart=/usr/bin/node /srv/yaw/server/server.js
