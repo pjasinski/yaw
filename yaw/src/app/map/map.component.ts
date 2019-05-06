@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Aircraft2Service } from '../aircraft2.service';
 import { Aircraft } from '../aircraft';
 import { AgmMap } from '@agm/core';
+import { appendNgContent } from '@angular/core/src/view/ng_content';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -15,7 +16,18 @@ export class MapComponent implements OnInit {
   homeLat: number = 39.3996;
   homeLon: number = -76.5239;
   public agmMap: AgmMap;
-  iconUrl: any = "https://upload.wikimedia.org/wikipedia/commons/1/17/Fighter_jet_red_icon.svg";
+
+  iconUrl: any = {
+    url: 'https://upload.wikimedia.org/wikipedia/commons/1/17/Fighter_jet_red_icon.svg',
+    scaledSize: {
+      height: 20,
+      width: 20
+    },
+    anchor: {
+      x: 20,
+      y: 0
+    }
+  };
   constructor(private airService: Aircraft2Service) {}
   displayFlightNumber(event) {
     console.log(event);
