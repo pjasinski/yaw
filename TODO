@@ -1,5 +1,5 @@
+- make aircraft-data component at different route that allows for the database to be searched by flight number
 - get sockets working with SSL on port 4001
-- set up dotenv to properly secure stuff (make sure you regenerate the maps api key)
 - set up the cheapci scripts to provide continous integration
 - make sure all nessecary components start on boot of the server. 
   - database importer
@@ -8,5 +8,4 @@
   - ssh
   - apache
   - mongo
-- get to implementing features on github in issues
 - possibly integrate day/night colors to match with the google map api
