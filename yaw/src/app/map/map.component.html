@@ -10,7 +10,12 @@
      [opacity]="0.5"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
-           <ng-template> {{ plane.flight }} <br> Hdg: {{ plane.track }}</ng-template>
+           <ng-template> {{ plane.flight }} 
+            <br> 
+                Hdg: {{ plane.track }}
+            <br>
+                Alt: {{ plane.altitude }}
+            </ng-template>
         </agm-snazzy-info-window>
     </agm-marker>
 </agm-map>
