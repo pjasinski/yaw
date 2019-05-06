@@ -20,18 +20,19 @@ export class MapComponent implements OnInit {
   displayFlightNumber(event) {
     console.log(event);
   }
-  /*
+  
   getIconURL(h: number) {
-    /*
+    
     let direction : number = Math.ceil(h/15)*15; // this spits out the nearest degrees 
     if (direction == 360) {
       direction = 0;
     }
     //console.log(direction);
-    let url = './marker.png';
-    //console.log(url);
+    let url = 'assets/plane'.concat(direction.toString()).concat('.svg');
+    console.log(url);
     //console.log(h);
-    return url;} */
+    return url;
+  }
   ngOnInit() {
     this.airService.returnAircraft().subscribe(data => {
       this.aircrafts = data;

@@ -6,8 +6,8 @@
      *ngFor="let plane of aircrafts" 
     [latitude]="plane.lat" 
      [longitude]="plane.lon"
-     [iconUrl]="iconUrl"
-     [opacity]="0.9"
+     [iconUrl]="getIconURL(plane.track)"
+     [opacity]="0.5"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
            <ng-template> {{ plane.flight }} <br> Hdg: {{ plane.track }}</ng-template>
