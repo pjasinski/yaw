@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="60"
+   height="60"
+   viewBox="0 0 6.0000006 6.6673983"
+   id="svg3729"
+   sodipodi:docname="plane0.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata3735">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3733" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3440"
+     inkscape:window-height="1377"
+     id="namedview3731"
+     showgrid="false"
+     inkscape:zoom="3.35"
+     inkscape:cx="-108.24053"
+     inkscape:cy="-23.763376"
+     inkscape:window-x="-8"
+     inkscape:window-y="477"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3729"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     transform="matrix(-0.10972171,0.00181899,0.0019152,0.10420986,6.5353876,0.03644964)"
+     id="g3727"
+     style="fill:#800000">
+ v2.0 14 November 2016 - Peter Lowden - peter@lowden.nz
+  <path
+   d="m 32,0.1 h 0.1 l 0.2,0.1 0.2,0.2 0.3,0.4 0.4,0.9 0.5,1.6 0.5,2.4 0.3,2.3 0.2,2.8 v 9.6 l 0.9,0.7 5.1,4.8 -0.2,-0.9 v -1.2 l 0.1,-1.1 0.2,-0.2 h 2.3 l 0.2,0.2 0.1,1.1 V 25 L 43.2,27 43.1,26.7 43,27 42.8,26.7 42.6,27.6 48.1,32.7 48,32 v -1.2 l 0.1,-1.1 0.2,-0.2 h 2.3 l 0.2,0.2 0.1,1.1 V 32 l -0.2,2 -0.1,-0.3 -0.1,0.3 -0.2,-0.3 -0.1,0.9 7.6,6.3 1,1.3 0.8,1.3 0.7,1.5 v 0.7 L 58.2,44.1 47.4,37.9 v 0.5 L 47.3,38.9 47,38.4 46.9,37.7 44.5,36.3 v 0.4 L 44.4,37.2 44.1,36.7 44,36 43.2,35.6 39.6,33.9 v 0.5 l -0.1,0.5 -0.3,-0.5 -0.1,-0.7 -1.8,-0.5 v 0.5 L 37.2,34.2 36.9,33.7 36.8,33 34.7,32.4 v 13.3 l -0.3,3.8 -0.2,1.6 -0.4,1.9 0.2,0.4 6.8,6.6 0.2,0.3 0.1,0.3 v 1.8 l -8.5,-2.5 -0.5,1.6 v 1.4 L 32,63 31.9,62.9 v -1.4 l -0.5,-1.6 -8.5,2.5 V 60.6 L 23,60.3 23.2,60 30,53.4 30.2,53 29.8,51.1 29.6,49.5 29.3,45.7 V 32.4 l -2.1,0.6 -0.1,0.7 -0.3,0.5 -0.1,-0.5 v -0.5 l -1.8,0.5 -0.1,0.7 -0.3,0.5 -0.1,-0.5 v -0.5 l -3.6,1.7 -0.8,0.4 -0.1,0.7 -0.3,0.5 -0.1,-0.5 v -0.4 l -2.4,1.4 -0.1,0.7 -0.3,0.5 -0.1,-0.5 V 37.9 L 5.8,44.1 3.7,45.7 V 45 l 0.7,-1.5 0.8,-1.3 1,-1.3 7.7,-6.4 -0.2,-0.8 -0.2,0.3 -0.1,-0.3 -0.1,0.3 -0.2,-2 v -1.2 l 0.1,-1.1 0.2,-0.2 h 2.3 l 0.2,0.2 0.1,1.1 V 32 L 15.9,32.7 21.4,27.6 21.2,26.7 21,27 20.9,26.7 20.8,27 20.6,25 v -1.2 l 0.1,-1.1 0.2,-0.2 h 2.3 l 0.2,0.2 0.1,1.1 V 25 l -0.2,0.9 5.1,-4.8 0.9,-0.7 V 10.8 L 29.5,8 29.8,5.7 30.3,3.3 30.8,1.7 31.2,0.8 31.5,0.4 31.7,0.2 31.9,0.1 Z"
+   id="path3725"
+   inkscape:connector-curvature="0"
+   style="fill:#800000;stroke:#0014aa;stroke-width:0.1" />
+</g>
+</svg>
