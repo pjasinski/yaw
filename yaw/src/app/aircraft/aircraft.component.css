@@ -1,12 +1,4 @@
-span {
-    padding: 5px;
-}
-
 body {
     color: rgb(234,67,53);
-}
-
-table tr td:nth-child(even) {
-    background: rgb(245, 245, 245); ;
 }
 
