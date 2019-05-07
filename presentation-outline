@@ -1,0 +1,22 @@
+1. Intro Slide
+2. Motivation => Planes = cool
+3. Methods: Angular = Client, MongoDB = database, Express(and apache) = server
+4. Client
+    - components:
+        - Map
+            - SVG overview (include snippet at map.component.ts at line 39)
+            - Angular Google Maps (snippet of options in the html)
+        - Aircraft List/Aircraft
+            - basic overview of how they work, you have a lot of creative control over that
+        - Aircraft Data component
+            - component to essentially serach the API endpoints
+            - coming soon (i'll let you know when its good)
+    - paths:
+        - / - map - this is meant to kinda make it good for mobile devices
+        - /list - aircraft list component
+        - /data - data component 
+5. API - list out the endpoints and what they do
+6. Mongo and Server side - slack me pres when you're done and I'll add this slide
+    - How the aircraft Data is obtained and imported
+    - Mongodb script 
+7. Demo! (hopefully this includes a deployed site)
