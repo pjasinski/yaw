@@ -4,7 +4,7 @@ import * as express from 'express';
 import * as morgan from 'morgan';
 import { Request, Response } from 'express';
 import { request } from "https";
-
+import { Aircraft } from "../../yaw/src/app/aircraft"
 const bodyParser = require('body-parser');
 
 YawDatastore
@@ -21,7 +21,7 @@ function startServer(yaw: YawDatastore) {
 
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
-
+  console.log(yaw.getNow());
   const port = process.env.PORT || 3000;
    /*
   yaw api data endpoints: https://patolento.com/yaw
@@ -31,6 +31,12 @@ function startServer(yaw: YawDatastore) {
   /now/?squak - getSquak(squak: number) - return based on a specific squak number
   /?squak - getAllSquaks(squack: number) - search the whole database for specific squaks
   */
+
+  app.get('/api/now', async (request: Request, response: Response) => {
+    const flights = await yaw.getFlightsNow()
+    console.log(flights);
+    response.json({ flights });
+  });
 
   app.get('/api/fn/:flightnumber', async (request: Request, response: Response) => {
     const fn = request.params.flightnumber;

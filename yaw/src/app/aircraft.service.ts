@@ -7,10 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AircraftService {
-  private _url: string = 'https://patolento.com/aircraft.json';
+  private _url: string = 'http://localhost:3001/api/';
   constructor(private http: HttpClient) { }
 
   returnAircraft() {
-    return this.http.get<Aircraft[]>(this._url);
+    return this.http.get<Aircraft[]>(this._url.concat("/now"));
   }
 }

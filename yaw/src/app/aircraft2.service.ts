@@ -7,7 +7,7 @@ import * as io from 'socket.io-client';
   providedIn: 'root'
 })
 export class Aircraft2Service {
-  private socket = io('http://patolento.com:4001/socket.io');
+  private socket = io('http://localhost:4001');
   constructor() { }
 
   returnAircraft() {

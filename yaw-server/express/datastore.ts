@@ -28,7 +28,16 @@ export class YawDatastore {
   /now/?squak - getSquak(squak: number) - return based on a specific squak number
   /?squak - getAllSquaks(squack: number) - search the whole database for specific squaks
   */
-
+  getNow() {
+    let now : number = Math.ceil((new Date()).getTime() / (1000*60)) * (1000*60);
+    
+    return now - (1000*60);
+  }
+  async getFlightsNow() {
+    let now = this.getNow();
+    console.log(now);
+    return await this.aircraft.find({ timeSeen: now }).toArray();
+  }
   async getFlightNumber(fn: string) {
     console.log(fn);
     return await this.aircraft.find({ "flight": fn }).toArray();
