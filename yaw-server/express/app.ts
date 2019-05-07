@@ -11,8 +11,6 @@ YawDatastore
   .connect()
   .then((client: MongoClient) => {
     const yaw = new YawDatastore(client);
-    let fuckingbullshit = yaw.getSquawk("3507");
-    console.log(fuckingbullshit);
     startServer(yaw);
   });
 
