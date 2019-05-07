@@ -45,6 +45,23 @@ export class MapComponent implements OnInit {
     //console.log(h);
     return url;
   }
+  getIconURL2(h: number) {
+    
+    let direction : number = Math.ceil(h/15)*15; // this spits out the nearest degrees 
+      direction = 0;
+    //console.log(direction);
+    const url = {
+      url: 'assets/plane'.concat(direction.toString()).concat('.svg'),
+      scaledSize: {
+        x: 25,
+        y: 25
+      },
+      rotation: h
+  };
+    //console.log(url);
+    //console.log(h);
+    return url;
+  }
   ngOnInit() {
     this.airService.returnAircraft().subscribe(data => {
       this.aircrafts = data;

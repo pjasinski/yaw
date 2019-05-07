@@ -6,7 +6,7 @@
      *ngFor="let plane of aircrafts" 
     [latitude]="plane.lat" 
      [longitude]="plane.lon"
-     [iconUrl]="getIconURL(plane.track)"
+     [iconUrl]="getIconURL2(plane.track)"
      [opacity]="0.5"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
