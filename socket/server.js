@@ -1,16 +1,16 @@
 const express = require("express");
-const https = require("https");
+const http = require("http");
 const socketIo = require("socket.io");
 const axios = require("axios");
 const port = process.env.PORT || 4001;
 const app = express();
 const fs = require('fs');
-const options = {
+/*const options = {
   key: fs.readFileSync("/etc/letsencrypt/live/patolento.com/privkey.pem", 'utf-8'),
   cert: fs.readFileSync("/etc/letsencrypt/live/patolento.com/fullchain.pem", 'utf-8'),
   ca: fs.readFileSync("/etc/letsencrypt/live/patolento.com/chain.pem", 'utf-8'),
-};
-const server = https.createServer(options, app);
+};*/
+const server = http.createServer(app);
 const io = socketIo(server);
 io.on("connection", socket => {
   console.log("New client connected"), setInterval(
