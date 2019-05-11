@@ -2,7 +2,7 @@ import { Collection, MongoClient, ObjectId } from 'mongodb';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const URL = 'mongodb://patolento.com:27017/aircraft';
+const URL = 'mongodb://yaw:yawdb@patolento.com:27017/aircraft';
 
 export class YawDatastore {
   aircraft: Collection;
