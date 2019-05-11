@@ -1,6 +1,6 @@
 fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://patolento.com:27017";
+var url = "mongodb://yaw:yawdb@patolento.com:27017";
 
 var jsonfile = fs.readFileSync('/data/aircraft.json');
 var jsonobj = JSON.parse(jsonfile);
