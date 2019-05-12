@@ -10,6 +10,7 @@ import { AgmCoreModule } from '@agm/core'
 import { MapComponent } from './map/map.component';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { Aircraft2Service } from './aircraft2.service';
+import { DataComponent } from './data/data.component';
 
 
 
@@ -20,6 +21,7 @@ import { Aircraft2Service } from './aircraft2.service';
     AircraftComponent,
     AircraftListComponent,
     MapComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,
