@@ -1,7 +1,7 @@
 # Yaw flight tracker
 ## General
-Yaw flight tracker is a flight tracker webapp that I am using to monitor air traffic above my house. It will be hosted on patolento.com/yaw. The system uses [dump1090-mutiability](https://github.com/mutability/dump1090), nodejs, express, and angularjs, to render realtime flight data from an RTL-SDR reciever and an antenna mounted in my attic.
-## JSON API
+Yaw flight tracker is a flight tracker webapp that I am using to monitor air traffic above my house. It will be hosted on patolento.com. The system uses [dump1090-mutiability](https://github.com/mutability/dump1090), nodejs, express, and angularjs, to render realtime flight data from an RTL-SDR reciever and an antenna mounted in my attic.
+## JSON Structure 
 The JSON data used in the app follows this format (from [dump1090](https://github.com/mutability/dump1090/blob/master/README-json.md)):
 - hex: the 24-bit ICAO identifier of the aircraft, as 6 hex digits. The identifier may start with '~', this means that the address is a non-ICAO address (e.g. from TIS-B).
 - squawk: the 4-digit squawk (octal representation)
@@ -17,11 +17,29 @@ The JSON data used in the app follows this format (from [dump1090](https://githu
 - seen: how long ago (in seconds before "now") a message was last received from this aircraft
 - rssi: recent average RSSI (signal power), in dbFS; this will always be negative.
 
-As of right now, the API isn't deployed yet, so the endpoints won't be listed here. But development is ongoing and the endpoints can be found in the code. 
+## End Points
+yaw api data endpoints: https://patolento.com/yaw/api
+- /now - get current list of aircraft over the sky (should be same data at https://patolento.com/aircraft.json)
+- /?flightnumber - getFlightNumber(fn: string) - returns all aircraft with the flight number specified
+- /now/?flightnumber - getFlightNumberFromNow(fn: string) - returns the flight number if available at current time
+- /now/?lat,long - getFromLatLon(lat: number, lon: number) - returns a flight at a specificed lat lon, or the cloest one
+- /now/?squak - getSquak(squak: number) - return based on a specific squak number
+- /?squak - getAllSquaks(squack: number) - search the whole database for specific squaks
 
-The data can be accessed raw live at https://patolento.com/aircraft.json
+### Example Request
+- Current Aircraft overhead
+https://patolento.com/yaw/api/now
+- search for a flight number
+https://patolento.com/yaw/api/fn/JBU1027
 
-This is a live view of the Mode S ADSB signals over my house at any given time. 
+## Running the full stack locally
+### API
+In a terminal change to yaw-server/express, run 'npm install', then run tsc *.ts, then run 'node app.js &'. 
 
-## Yaw Angular Application
-To run, make sure you have the Angular CLI and npm installed on your machine, then run 'npm install' and 'ng serve' until it stops yelling at you. 
+### Socket
+In a terminal change to /socket and run 'npm install' and then run 'node server.js'
+
+### Client
+cd to /yaw, run 'npm install', then run 'ng-serve --open'
+
+Its important to do this in that order so that the client has the right data available to it. 

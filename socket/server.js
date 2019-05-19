@@ -22,7 +22,7 @@ io.on("connection", socket => {
 const getApiAndEmit = async socket => {
   try {
     const res = await axios.get(
-      "http://patolento.com/yaw/api/now"
+      "https://patolento.com/aircraft.json"
     );
     let flights = [];
     flights = res.data;
