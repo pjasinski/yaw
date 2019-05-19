@@ -23,7 +23,7 @@ yaw api data endpoints: https://patolento.com/yaw/api
 - /?flightnumber - getFlightNumber(fn: string) - returns all aircraft with the flight number specified
 - /now/?flightnumber - getFlightNumberFromNow(fn: string) - returns the flight number if available at current time
 - /now/?lat,long - getFromLatLon(lat: number, lon: number) - returns a flight at a specificed lat lon, or the cloest one
-- /now/?squak - getSquak(squak: number) - return based on a specific squak number
+- /now/?squak - getSquak(squak: number) - return based on a specific squawk number
 - /?squak - getAllSquaks(squack: number) - search the whole database for specific squaks
 
 ### Example Request
