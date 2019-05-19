@@ -42,4 +42,4 @@ In a terminal change to /socket and run 'npm install' and then run 'node server.
 ### Client
 cd to /yaw, run 'npm install', then run 'ng-serve --open'
 
-Its important to do this in that order so that the client has the right data available to it. 
+Its important to do this in that order so that the client has the right data available to it. Give the app about 10 seconds to load, if after 10 seconds it doesn't load, inspect the page in Chrome and make sure the socket is listening for the server and the aircraft2 service is listening on localhost:4001.
