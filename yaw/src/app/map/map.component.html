@@ -16,7 +16,7 @@
     [opacity]="0.5"
      >
         <agm-snazzy-info-window [maxWidth]="50" [closeWhenOthersOpen]="true">
-           <ng-template> {{ plane.flight }} 
+           <ng-template><div *ngIf="plane.flight">{{ plane.flight }}</div>
             <br> 
                 Hdg: {{ plane.track }}
             <br>
